@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Riento",
+    "slug": "mesta",
+    "version": "0.1.2",
+    "icon": "./Logo/ChatGPT Image Jul 7, 2026, 10_38_07 PM.png",
+    "orientation": "portrait",
+    "scheme": "mesta",
+    "splash": {
+      "backgroundColor": "#05070A",
+      "image": "./Logo/ChatGPT Image Jul 7, 2026, 10_38_07 PM.png",
+      "resizeMode": "contain"
+    },
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.riento.app",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.riento.app",
+      "versionCode": 12,
+      "adaptiveIcon": {
+        "backgroundColor": "#05070A",
+        "foregroundImage": "./Logo/ChatGPT Image Jul 7, 2026, 10_38_07 PM.png"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "blockedPermissions": [
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WAKE_LOCK",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "After you tap Check venue & song, Riento uses foreground location to suggest a nearby venue and contribute a venue-level signal. You can turn this offer off in Settings. Riento does not use background location."
+        }
+      ],
+      "expo-secure-store",
+      "expo-apple-authentication",
+      [
+        "expo-audio",
+        {
+          "enableBackgroundRecording": false,
+          "microphonePermission": "Riento uses the microphone for one short foreground check only after you tap Check venue & song or Identify this song. Android provider matches may be shared as venue-level now-playing; iPhone matches stay on this device unless you send private accuracy feedback. Raw audio is not stored by Riento.",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-asset",
+      "./plugins/withIosGoogleSignInPods"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c250a2c9-d4cf-4c97-8427-a86b5bef6c89"
+      }
+    }
+  }
+}

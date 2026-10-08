@@ -1,0 +1,5 @@
+[functions.delete-device-data]
+verify_jwt = false
+
+[functions.recognize-android-music]
+verify_jwt = true

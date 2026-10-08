@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riento</title>
+  <meta name="description" content="Riento helps people explore Helsinki nightlife with privacy-first venue-level crowd and music signals.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #05070a;
+      --panel: #0e131b;
+      --text: #eef2f7;
+      --muted: #a8b3c2;
+      --accent: #8b5cf6;
+      --border: #1f2937;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top, #111827 0%, var(--bg) 55%);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 24px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 760px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px 28px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0 auto 16px;
+      max-width: 44rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 600;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .secondary {
+      color: var(--text);
+      border: 1px solid var(--border);
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Find the right room tonight.</h1>
+    <p>Riento is a privacy-first guide to Helsinki bars and clubs, with broad venue-level crowd signals, current music context, and no public user tracking.</p>
+    <p>Browsing, ratings, crowd signals, and My spots work without registration. Optional email, Google, or Apple accounts are used only for moderated written reviews.</p>
+    <div class="actions">
+      <a class="primary" href="./docs/SUPPORT.html">Support</a>
+      <a class="secondary" href="./docs/PRIVACY_POLICY.html">Privacy Policy</a>
+      <a class="secondary" href="./docs/ACCOUNT_DELETION.html">Data Deletion</a>
+      <a class="secondary" href="./docs/TERMS.html">Terms</a>
+      <a class="secondary" href="./docs/COMMUNITY_GUIDELINES.html">Community Guidelines</a>
+      <a class="secondary" href="mailto:Siivola.Labs@proton.me">Contact</a>
+    </div>
+  </main>
+</body>
+</html>

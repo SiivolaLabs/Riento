@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riento Privacy Policy</title>
+  <style>
+    :root { color-scheme: dark; --bg: #05070a; --panel: #0e131b; --text: #eef2f7; --muted: #a8b3c2; --accent: #8b5cf6; --border: #1f2937; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 860px; margin: 0 auto; padding: 40px 20px 72px; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 20px; padding: 32px; }
+    h1, h2 { line-height: 1.2; margin: 0 0 16px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.2rem; margin-top: 32px; }
+    p, ul { margin: 0 0 16px; }
+    ul { padding-left: 20px; }
+    .meta { color: var(--muted); margin-bottom: 24px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main><div class="card">
+    <h1>Riento Privacy Policy</h1>
+    <p class="meta">Effective date: 2026-08-01</p>
+    <p><strong>Operator:</strong> Pieti Siivola</p>
+    <p><strong>Contact:</strong> <a href="mailto:Siivola.Labs@proton.me">Siivola.Labs@proton.me</a></p>
+    <p>Riento helps people find active Helsinki bars and clubs. Browsing and venue-signal features work without an account. Users may optionally use email/password, Google, or Apple only to add written venue reviews.</p>
+
+    <h2>Private App Session And Optional Account</h2>
+    <p>Browsing, Nearby, My spots, and preferences create no backend identity. On the first server contribution, Riento creates a random pseudonymous Supabase session for authorization, cooldowns, data controls, and abuse prevention. It is not a hardware or advertising ID and is never shown publicly.</p>
+    <p>If a user creates a review account, Supabase processes the selected authentication method. During the controlled pilot, email accounts activate without an inbox-ownership confirmation message; users should provide an address they control because password recovery is sent there. Google or Apple accounts use a provider identifier, provider name, and email or Apple relay email; Google may also supply basic profile name/photo metadata to Supabase. Riento does not use this data for advertising, unrelated provider APIs, or public profiles.</p>
+    <p>A new Google or Apple identity links to the current private-session UUID so existing contributions remain attached. An identity that already belongs to another Riento account does not silently replace or merge that session.</p>
+
+    <h2>Information We Handle</h2>
+    <ul>
+      <li>A random private Supabase user ID after the first server contribution</li>
+      <li>Optional account email or relay email, provider, provider identifier, and basic provider profile metadata</li>
+      <li>Venue-level GPS-derived signals when foreground sharing is enabled and explicit manual placements</li>
+      <li>Number-only 1-5 ratings and optional moderated written reviews from account holders</li>
+      <li>Private review reports and reviewer blocks</li>
+      <li>Private venue and missing-venue reports</li>
+      <li>Track and artist metadata, Yes/No accuracy feedback, and related metadata from music confirmations or matches</li>
+      <li>Basic operational logs needed for security and service operation</li>
+    </ul>
+    <p>My spots and app preferences stay locally on the device and are not synced to Riento.</p>
+
+    <h2>Location And Crowd Signals</h2>
+    <p>Riento requests foreground location only and does not use background location. Nearby sorting stays on the device. The app-open accuracy-check offer starts enabled on new installs and appears once per cold app session. Location is requested only after the user taps <strong>Check venue &amp; song</strong>. If permission is granted and the device is near a known venue, Riento submits the matched venue ID and confidence before opening the one-shot music check, not durable raw coordinates or a public user location. Users can dismiss the offer or turn it off in Settings.</p>
+    <p>One device contribution remains private. A community Active label requires at least two recent private identities; community contributions cannot produce Busy or Packed during launch. Public clients cannot read exact contributing-device counts, and public snapshot times are grouped into 15-minute buckets. Raw signals expire and are deleted after expiry; crowd snapshots are retained for up to 7 days.</p>
+
+    <h2>Ratings, Reviews, And Reports</h2>
+    <p>Number-only ratings need no account and are saved as private feedback. Public summaries require at least three permanent-account ratings. Written reviews require an optional permanent account and remain private until operator approval. Pending or rejected text does not contribute publicly. Approved text appears without an email address, provider identifier, or public profile. Users can privately report reviews and block review authors. Riento may reject or hide abusive, harassing, fraudulent, off-topic, or spam content. Resolved review reports are deleted after up to 90 days. Venue reports remain private operator-review inputs.</p>
+
+    <h2>Music Recognition</h2>
+    <p>Riento does not store raw audio or listen in the background. Music checks begin only after a venue-specific tap, including <strong>Check venue &amp; song</strong> or <strong>Identify this song</strong>. Supported iOS builds use short in-memory ShazamKit processing and keep the match on that device unless the user sends private Yes/No accuracy feedback. Supported Android builds send a transient fingerprint through an authenticated function to ACRCloud; the trusted function may publish returned provider metadata after validating a current venue signal.</p>
+    <p>A trusted Android provider match or an authorized admin's manually verified entry may update now-playing. After matching, Riento shows the suggested venue and song and asks whether both are right. Yes/No answers and displayed-track confirmations are private feedback and do not create, replace, remove, or extend public now-playing/history. Public now-playing expires after about 45 minutes, music observations after up to 35 days, private music feedback/report records after up to 90 days, and private admin music audit actions after up to 180 days.</p>
+
+    <h2>Public And Private</h2>
+    <p>Public information may include venue details, broad crowd labels, trusted now-playing, music history, permanent-account rating summaries after a minimum sample, and approved written venue reviews.</p>
+    <p>Riento does not publicly show individual locations, private session IDs, exact crowd counts, account emails, provider identifiers/metadata, moderation notes, public user profiles, private reports, My spots, preferences, raw audio, or fingerprints.</p>
+
+    <h2>Service Providers</h2>
+    <p>Riento does not sell personal data or use its private identifier for advertising tracking. Limited providers include Supabase, Expo/platform infrastructure, Google Maps Platform, Google Identity Services for optional authentication, Apple Authentication Services for optional authentication, Apple system services for ShazamKit, and ACRCloud for supported Android fingerprint matching.</p>
+
+    <h2>Data Controls</h2>
+    <p>Settings lets users export local data, account-provider names, and server contributions as JSON, clear local data, and delete contributions linked to the current private session together with that session. Optional review accounts and their attributable data can also be deleted directly in Settings. Apple deletion obtains a fresh short-lived authorization code before confirmation is executed; Google and Apple provider revocation are attempted as part of terminal deletion. Provider tokens/codes are not stored as Riento content. If revocation is unavailable, Riento still deletes its data and provides a manual provider follow-up. Losing an anonymous session before in-app deletion may prevent Riento from linking old pseudonymous records back to the installation; expiry and cleanup still apply.</p>
+    <p>For recoverable deletion, the device creates a random capability and Riento stores only its one-way hash and operation outcome in a private service ledger. The random user ID and Apple subject are cleared from that record at completion. Completed capability records remain for up to 400 days so the same device can confirm a lost response; the raw capability remains only on the device until local cleanup finishes.</p>
+
+    <h2>Your Rights And Security</h2>
+    <p>Depending on location, users may have rights to access, correct, export, delete, restrict, or object to processing. Riento uses reasonable technical and organizational safeguards, but no system is completely secure.</p>
+
+    <h2>Children, International Processing, And Changes</h2>
+    <p>Riento is not intended for children. Service providers may process data in multiple jurisdictions. This policy may be updated with a revised effective date.</p>
+
+    <h2>Contact</h2>
+    <p>Contact Pieti Siivola at <a href="mailto:Siivola.Labs@proton.me">Siivola.Labs@proton.me</a>.</p>
+  </div></main>
+</body>
+</html>

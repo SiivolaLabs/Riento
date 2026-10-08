@@ -1,0 +1,15 @@
+{
+  "name": "mesta-shazamkit",
+  "version": "0.1.0",
+  "description": "Mesta's local iOS ShazamKit Expo module boundary.",
+  "private": true,
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "expo-modules-core": "*"
+  }
+}

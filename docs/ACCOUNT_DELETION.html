@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riento Data Deletion</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #05070a;
+      --panel: #0e131b;
+      --text: #eef2f7;
+      --muted: #a8b3c2;
+      --accent: #8b5cf6;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+    }
+    h1, h2 {
+      line-height: 1.2;
+      margin: 0 0 16px;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.2rem; margin-top: 32px; }
+    p, ul, ol { margin: 0 0 16px; }
+    ul, ol { padding-left: 20px; }
+    .meta { color: var(--muted); margin-bottom: 24px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>Riento Data Deletion</h1>
+      <p class="meta">Operator: Pieti Siivola</p>
+
+      <p>Riento does not require an account. Users who create an optional email, Google, or Apple account for written reviews can delete that account and its attributable data directly in the app. Account-free users can delete data linked to the current private app session the same way.</p>
+
+      <h2>Delete data in the app</h2>
+      <ol>
+        <li>Open Riento.</li>
+        <li>Go to <strong>Settings</strong>.</li>
+        <li>Open <strong>Data controls</strong>.</li>
+        <li>Tap <strong>Delete all Riento data</strong>, or <strong>Delete account and all Riento data</strong> when signed in, and confirm.</li>
+      </ol>
+
+      <h2>Request account deletion without the app</h2>
+      <p>Optional review-account users can request deletion without opening or reinstalling Riento. Email <a href="mailto:Siivola.Labs@proton.me?subject=Riento%20Account%20Deletion">Siivola.Labs@proton.me</a> from the account email or Apple relay email with the subject <strong>Riento Account Deletion</strong> and state whether the account used email, Google, or Apple. Riento will verify control before completing a valid request within 30 days unless a shorter legal deadline applies.</p>
+      <p>For an account-free private session, use in-app deletion while that session is still available. Riento cannot safely identify or relink a lost pseudonymous session from an email address.</p>
+
+      <h2>What data is deleted</h2>
+      <p>In-app deletion clears local My spots/preferences and deletes the backend identity plus attributable venue signals, placements, ratings, written reviews, review reports/blocks, venue reports, music reports, and recognition-attempt records.</p>
+      <p>For Apple accounts, the app requests a fresh Apple authorization before deletion. The service deletes attributable Riento data, attempts bounded Apple revocation, and then deletes the Auth user. The native app attempts bounded Google revocation after Riento deletion is terminal. If automatic revocation is unavailable, delete Riento manually from the connected-app list in Google Account or Apple ID settings. Outside-app support deletion cannot revoke provider access without a fresh provider authorization.</p>
+
+      <h2>What may be retained temporarily or separately</h2>
+      <ul>
+        <li>De-identified venue-level crowd snapshots and music status derived before deletion may remain until their short retention period expires.</li>
+        <li>A private deletion-operation record containing only the one-way hash of the device recovery capability and terminal outcome may remain for up to 400 days. The deleted user ID and Apple subject are cleared at completion.</li>
+        <li>Backups and operational/security logs may remain where required for service operation or legal obligations.</li>
+      </ul>
+
+      <p>For more detail about privacy and retention, see the <a href="./PRIVACY_POLICY.html">Riento Privacy Policy</a>. For support, visit <a href="./SUPPORT.html">Riento Support</a>.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about data deletion, contact <a href="mailto:Siivola.Labs@proton.me">Siivola.Labs@proton.me</a>.</p>
+    </div>
+  </main>
+</body>
+</html>

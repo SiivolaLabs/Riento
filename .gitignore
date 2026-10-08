@@ -1,0 +1,44 @@
+# dependencies
+node_modules/
+
+# Expo / React Native generated state
+.expo/
+.expo-shared/
+dist/
+build/
+coverage/
+
+# native dependency/build outputs
+ios/Pods/
+ios/build/
+ios/**/*.xcuserdata/
+android/.gradle/
+android/**/.cxx/
+android/build/
+android/app/build/
+
+# local secrets and signing material
+.env
+.env.*
+!.env.example
+!.env.production.example
+*.keystore
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+profiles/
+
+# app store build artifacts
+*.ipa
+*.aab
+*.apk
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+.opencode/
+
+# ACRCloud SDK binaries are fetched by script after licensing review
+modules/mesta-acrcloud/android/libs/
